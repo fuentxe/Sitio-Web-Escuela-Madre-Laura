@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from queloque.netlify.app/dashboard/solicitud_master.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 15 Jun 2022 15:41:53 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <title>ADMINISTRACIÓN - SOLICITUDES</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+    <link rel="stylesheet" href="sweetalert2.min.css">
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="../assets/css/templatemo-edu-meeting.css" rel="stylesheet">
+</head>
+<script>
+    function descarga() {
+    html2canvas(document.querySelector("#descarga")).then(canvas=> {
+        var img = canvas.toDataURL();
+        var link = document.createElement("a");
+        link.download = "reporte";
+        link.href = img;
+        link.click();
+    });
+ };
+
+
+</script>
+<body>
+    <div class="container-xxl position-relative bg-white d-flex p-0">
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+
+         <!-- Sidebar Start -->
+         <div class="sidebar pe-4 pb-3">
+            <nav class="navbar bg-light navbar-light">
+                <!-- <a href="Pagos.html" class="navbar-brand mx-2 mb-3"> -->
+                    <h3 class="text-primary"></i>Solicitud</h3>
+                </a>
+                <div class="d-flex align-items-center ms-4 mb-4">
+                    <div class="position-relative">
+                    </div>
+                    <div class="ms-3">
+                        <!-- <h6 class="mb-0">Eliza</h6> -->
+                        <!-- <span>Admin</span> -->
+                    </div>
+                </div>
+                <div class="navbar-nav w-100">
+
+                    
+                    <!-- <a href="/dashboard/pagos_master.html" class="nav-item nav-link"><i class="bi bi-cash-stack me-2"></i>Pagos</a> -->
+                    <!-- <a href="/dashboard/admision_master.html" class="nav-item nav-link"><i class="bi bi-file-earmark-person me-2"></i>Admisión</a> -->
+                    <a href="/dashboard/solicitud_master.html" class="nav-item nav-link active"><i class="fa fa-table me-2"></i>Solicitudes</a> 
+                    <a href="/inicio-de-sesion.html"  id="btn_cerrar_sesion" class="nav-item nav-link"><i class="bi bi-box-arrow-left me-2"></i> Cerrar Sesión</a>
+
+                </div>
+            </nav>
+        </div>
+        <!-- Sidebar End -->
+
+
+        <div class="content">
+            <!-- Navbar Start -->
+            <nav class="navbar navbar-expand bg-light navbar-light sticky-top px-4 py-0">
+                <a href="" class="navbar-brand d-flex d-lg-none me-4">
+                    <h2 class="text-primary mb-0"><i class="fa fa-hashtag"></i></h2>
+                </a>
+                <a href="#" class="sidebar-toggler flex-shrink-0">
+                    <i class="fa fa-bars" style="color: #000;"></i>
+                </a>
+                <br> <br> <br>
+            </nav>
+            <!-- Navbar End -->
+            
+            <!-- Blank Start -->
+            <div class="container-fluid pt-4 px-4">
+                <div class="row vh-60 bg-light rounded align-items-center justify-content-center mx-0">
+                   <div class="container m-5">
+        <h3>Solicitud de Documentos Académicos</h3>
+        <div class="bg-light rounded h-100 p-4">
+            <div class="table-responsive">
+                <table id="tabla_solicitud" class="table table-hover text-center">
+                    <thead>
+                        <tr>
+                            <th scope="col">Nombres</th>
+                            <th scope="col">Apellidos</th>
+                            <th scope="col">Fecha de nacimiento</th>
+                            <th scope="col">Cédula</th>
+                            <th scope="col">Teléfono</th>
+                            <th scope="col">Fecha de egreso</th>
+                            <th scope="col">Tipo de documento</th>
+                            <th scope="col">Fecha</th>
+                            <th scope="col">Confirmar</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- <tr>
+                            <td>John</td>
+                            <td>Doe</td>
+                            <td>jhon@email.com</td>
+                            <td>USA</td>
+                            <td>123</td>
+                            <td>Member</td>
+                        </tr> -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+</div>
+                </div>
+            </div>
+            <!-- Blank End -->
+   <!-- Button trigger modal -->
+    <button id="lanzar_modal" style="display:none" type="button" class="btn btn-primary" data-bs-toggle="modal"
+        data-bs-target="#modal_g">
+        Launch demo modal
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="modal_g" tabindex="-1" aria-labelledby="modal_gLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal_gLabel">informacion detallada</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div id="modal_body" class="modal-body">
+
+                </div>
+                <div class="modal-footer">
+                    <button onclick="descarga()" type="button" class="btn btn-primary">Descargar</button>
+                    <button id="btn_modal" type="button" class="btn btn-success">Confirmar</button>
+                </div>
+            </div>
+        </div>
+<script>
+    function descarga() {
+    html2canvas(document.querySelector("#descarga")).then(canvas=> {
+        var img = canvas.toDataURL();
+        var link = document.createElement("a");
+        link.download = "reporte";
+        link.href = img;
+        link.click();
+    });
+ };
+
+
+</script>
+
+           
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/chart/chart.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.1/dist/html2canvas.min.js"></script>
+     <script src="assets/js/isotope.min.js"></script>
+        <script src="assets/js/owl-carousel.js"></script>
+        <script src="sweetalert2.min.js"></script>
+        <script src="assets/js/lightbox.js"></script>
+        <script src="assets/js/tabs.js"></script>
+        <script src="assets/js/video.js"></script>
+        <script src="assets/js/slick-slider.js"></script>
+        <script src="assets/js/custom.js"></script>
+        <!-- JavaScript Bundle with Popper -->
+        <script src="   https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+<script type="module" src="/build/app.js"></script>
+<!-- <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script> -->
+</body>
+
+<!-- Mirrored from queloque.netlify.app/dashboard/solicitud_master.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 15 Jun 2022 15:41:53 GMT -->
+</html>
